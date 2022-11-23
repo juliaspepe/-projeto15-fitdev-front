@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { InfoContext } from "./InfoContext";
 import GlobalStyle from "./style/GlobalStyle";
-import PageProducts from "./PageProducts";
+import PageHome from "./PageHome";
+import PageProduct from "./PageProduct";
 import PageLogin from "./PageLogin";
 import PageRegister from "./PageRegister";
 import PageCart from "./PageCart";
@@ -15,7 +16,8 @@ export default function App() {
       <BrowserRouter>
         <GlobalStyle />
         <Routes>
-          <Route path="/" element={<PageProducts />} />
+          <Route path="/" element={<PageHome />} />
+          <Route path="/product" element={<PageProduct />} />
           <Route path="/login" element={<PageLogin />} />
           <Route path="/register" element={<PageRegister />} />
           <Route path="/cart" element={<PageCart />} />
